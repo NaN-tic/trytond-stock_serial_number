@@ -17,7 +17,6 @@ Imports::
     ...     get_company
     >>> today = datetime.date.today()
 
-
 Install stock Module::
 
   >>> config = activate_modules('stock_serial_number')
@@ -79,6 +78,7 @@ Add a line of 10 quantities of same product::
     >>> move.from_location = output_loc
     >>> move.to_location = customer_loc
     >>> move.unit_price = Decimal('1')
+    >>> move.currency = company.currency
     >>> shipment_out.save()
 
 Split the line into lots from 1 to 10::
@@ -113,6 +113,7 @@ We are not allowed to make a move of more than ::
     >>> move.from_location = output_loc
     >>> move.to_location = customer_loc
     >>> move.unit_price = Decimal('1')
+    >>> move.currency = company.currency
     >>> move.click('do') # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
         ...
