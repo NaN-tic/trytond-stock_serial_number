@@ -26,6 +26,10 @@ class Template(metaclass=PoolMeta):
         'product in quantities diferent than 1.')
 
 
+class Product(metaclass=PoolMeta):
+    __name__ = 'product.product'
+
+
 class Move(metaclass=PoolMeta):
     __name__ = 'stock.move'
 
