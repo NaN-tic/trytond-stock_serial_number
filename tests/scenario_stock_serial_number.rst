@@ -73,7 +73,7 @@ Add a line of 10 quantities of same product::
     >>> move = StockMove()
     >>> shipment_out.outgoing_moves.append(move)
     >>> move.product = product
-    >>> move.uom = unit
+    >>> move.unit = unit
     >>> move.quantity = 10
     >>> move.from_location = output_loc
     >>> move.to_location = customer_loc
@@ -108,7 +108,7 @@ We are not allowed to make a move of more than ::
 
     >>> move = StockMove()
     >>> move.product = product
-    >>> move.uom = unit
+    >>> move.unit = unit
     >>> move.quantity = 10
     >>> move.from_location = output_loc
     >>> move.to_location = customer_loc
