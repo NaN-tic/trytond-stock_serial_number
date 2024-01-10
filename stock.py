@@ -105,7 +105,7 @@ class SplitMoveStart(metaclass=PoolMeta):
     product = fields.Many2One('product.product', 'Product', readonly=True)
     lots = fields.Many2Many('stock.lot', None, None, 'Lot', domain=[
             ('product', '=', Eval('product')),
-            ], depends=['product'])
+            ])
     start_lot = fields.Char('Start Lot')
     end_lot = fields.Char('End Lot')
 
