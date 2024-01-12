@@ -21,8 +21,7 @@ class Template(metaclass=PoolMeta):
     serial_number = fields.Boolean('Serial Number',
         states={
             'invisible': ~Eval('type').in_(['goods', 'assets']),
-            },
-        depends=['type'], help='If marked it won\'t be allowed to move this '
+            }, help='If marked it won\'t be allowed to move this '
         'product in quantities diferent than 1.')
 
 
